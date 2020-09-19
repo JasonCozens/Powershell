@@ -1,2 +1,2 @@
 # Powershell
-Powershell Tutorial and Reference
+A task automation and configuration management framework from Microsoft.
