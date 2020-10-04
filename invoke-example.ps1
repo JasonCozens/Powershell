@@ -19,9 +19,10 @@ param (
         "`n$ExampleHeader [ENTER]" 
     Read-Host
     Write-Host `
-        -NoNewline `
         -BackgroundColor black `
         -ForegroundColor white `
         "`n`nPS> $Command`n"
+    Write-Host
     Invoke-Expression $Command
+    Write-Host $("-" * 80)
 }

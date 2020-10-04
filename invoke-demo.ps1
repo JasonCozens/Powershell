@@ -5,17 +5,20 @@
 function Invoke-Demo {
 [CmdletBinding()] 
 param (
-    [Parameter(ValueFromPipeline)]
-    [string[]]
-    $Example
+    [Parameter(ValueFromPipelineByPropertyName)]
+    [string]
+    $ExampleHeader,   
+    [Parameter(ValueFromPipelineByPropertyName)]
+    [string]
+    $Command
 )
 begin {
     . .\invoke-example.ps1
 }
 process {
     Invoke-Example `
-        -ExampleHeader $_[0] `
-        -Command $_[1]
+        -ExampleHeader $ExampleHeader `
+        -Command $Command
 }
 end {
 
