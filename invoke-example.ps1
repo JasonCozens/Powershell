@@ -24,5 +24,5 @@ param (
         "`n`nPS> $Command`n"
     Write-Host
     Invoke-Expression $Command
-    Write-Host $("-" * 80)
+    Write-Host "`n$('-' * 80)"
 }
